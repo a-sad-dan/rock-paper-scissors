@@ -9,7 +9,7 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     // Tie Case
     if (playerSelection == computerSelection) {
-        return 0;
+        return -1;
     }
     // Win cases for the player
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {return 1;}

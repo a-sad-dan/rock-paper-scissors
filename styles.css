@@ -1,5 +1,7 @@
 /* I need to clean this code a lot. LIKE A LOT */
-
+#page-wrapper{
+    height: 10vh;
+}
 
 :root {
     font-size: 12px;
@@ -182,12 +184,6 @@ body {
     object-fit: contain;
 }
 
-/* Background for buttons */
-#rock {
-    background-image: url(Assets/stone-icon.png);
-    object-fit: scale-down;
-}
-
 /*              HOVER-ANIMATIONS              */
 
 #choices>input:hover {
@@ -233,7 +229,7 @@ body {
 
     #choices {
         gap: 0.5em;
-        padding-top: 3em;
+        padding-top: 1em;
     }
 
     #versus-text {
@@ -250,7 +246,7 @@ body {
     }
 
     #heading-main {
-        padding: 2em;
+        padding: 1em 2em;
     }
 
     /* Removed annoying blue click border on mobile devices */
