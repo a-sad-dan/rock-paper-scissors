@@ -198,6 +198,10 @@ body {
 /*                  MEDIA QUERIES                    */
 @media screen and (max-width:767px) {
 
+    body{
+        background-image: url(Assets/alt-background-2.png);
+    }
+
     #stats-display {
         flex-direction: column;
         gap: 2em;
