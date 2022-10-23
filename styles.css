@@ -190,7 +190,6 @@ body {
 #choices>input:hover {
     transform: scale(1.2);
     transition: all 120ms ease-in-out;
-    outline: none; 
 }
 
 /*                  MEDIA QUERIES                    */
@@ -246,4 +245,11 @@ body {
     #heading-main {
         padding: 2em;
     }
+
+    /* Removed annoying blue click border on mobile devices */
+
+    input {
+        outline: none;
+    }
+
 }
