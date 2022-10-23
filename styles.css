@@ -104,7 +104,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    /* background-image: url(/Assets/selected-bg.png); */
+    /* background-image: url(Assets/selected-bg.png); */
     border-radius: 20%;
     padding: 2em;
     background: rgba(256, 256, 256, 0.1);
@@ -178,7 +178,7 @@ body {
 
 /* Background for buttons */
 #rock {
-    background-image: url(/Assets/stone-icon.png);
+    background-image: url(Assets/stone-icon.png);
     object-fit: scale-down;
 }
 
@@ -240,7 +240,7 @@ body {
     }
 
     body{
-        /* background-image: url(/Assets/background.png) */
+        /* background-image: url(Assets/background.png) */
     }
 
     #heading-main{
