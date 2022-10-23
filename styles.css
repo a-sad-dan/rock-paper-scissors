@@ -16,9 +16,12 @@ body {
     padding: 0;
     /*                      BACKGROUND FOR BODY                 */
     background-image: url(Assets/alt-background.png);
-    /* background-position: bottom; */
-    background-size: cover;
+    background-size: cover !important;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
     /* THIS makes sure that the bg does not move with the page */
     background-attachment: fixed;
 }
