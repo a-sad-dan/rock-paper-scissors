@@ -1,0 +1,252 @@
+/* I need to clean this code a lot. LIKE A LOT */
+
+
+:root {
+    font-size: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid gray; */
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+    /*                      BACKGROUND FOR BODY                 */
+    background-image: url(Assets/alt-background.png);
+    /* background-position: bottom; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* THIS makes sure that the bg does not move with the page */
+    background-attachment: fixed; 
+}
+
+
+/* Typography */
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: #162424;
+}
+
+
+#versus-text {
+    /* line-height: 8em; */
+    font-size: 1.5rem;
+    /* border:1px solid black; */
+    height: 10%;
+    position: relative;
+    margin-top: -5%;
+    align-self: center;
+    /* Still Need to fix align-self to center - 10px */
+}
+
+.score {
+    font-size: 1.3em;
+}
+
+/* Alignment of objects */
+#page-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#heading-main {
+    text-align: center;
+    padding: 2em;
+    padding-top: 10vh;
+    /* border: 2px solid black; */
+    /* text-decoration: 2px underline; */
+
+
+    margin: 0 auto;
+}
+
+#main-content {
+    min-width: 30px;
+    max-width: 1440px;
+    width: 70%;
+    gap: 4em;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#stats-display {
+    /* max-width: 500px; */
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    /* added new padding */
+    padding: 1em 0;
+}
+
+.big-icon {
+    width: 60%;
+    aspect-ratio: 1;
+    opacity: 0.7;
+}
+
+
+/* I am not sure about this */
+#computer-stats,
+#player-stats {
+    /* min-width:120px; */
+    max-width: 200px;
+    width: 90%;
+}
+
+.selected-image {
+    max-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* background-image: url(/Assets/selected-bg.png); */
+    border-radius: 20%;
+    padding: 2em;
+    background: rgba(256, 256, 256, 0.1);
+}
+
+/* Making the small icons the correct size */
+.small-icon {
+    max-height: 70px;
+    width: 40%;
+    min-width: 30px;
+    object-fit: contain;
+    margin-top: -100%;
+    /* display: inline; */
+}
+
+.small-icon.left {
+    margin-left: -70%;
+
+}
+
+.small-icon.right {
+    margin-right: -60%;
+}
+
+#footer {
+    text-align: center;
+    padding: 0.8em;
+    font-size: 1.2em;
+    /* background-color: rgba(0,0,0,0.2); */
+
+}
+
+#footer  a{
+    color: unset;
+    text-decoration: none;
+}
+
+#footer a:hover{
+    text-decoration: underline;
+    color: #101b1b;
+}
+
+.selected-image>img {
+    width: 100%;
+}
+
+
+/* Choices section/button */
+#choices {
+    width: 80%;
+    max-width: 500px;
+    min-width: 300px;
+    /* border: 1px solid black; */
+    margin: 2em auto;
+    /* padding-top: 3em; */
+
+    /* added this new thing in hurry */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1em; */
+}
+
+#choices input {
+    width: 20%;
+    max-width: 120px;
+    aspect-ratio: 1;
+    margin: 0px 5%;
+    object-fit: contain;
+}
+
+/* Background for buttons */
+#rock {
+    background-image: url(/Assets/stone-icon.png);
+    object-fit: scale-down;
+}
+
+/*              HOVER-ANIMATIONS              */
+
+#choices>input:hover {
+    transform: scale(1.2);
+    transition: all 120ms ease-in-out;
+}
+
+/*                  MEDIA QUERIES                    */
+@media screen and (max-width:767px) {
+
+    #stats-display {
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #computer-stats,
+    #player-stats {
+
+        /* defining Width */
+        min-width: 250px;
+        /* align-self: center; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        /* gap: 4em; */
+    }
+
+    #footer {
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1.2em;
+        /* background-color: rgba(0,0,0,0.2); */
+
+    }
+
+
+    #choices {
+        gap: 0.5em;
+        padding-top: 3em;
+    }
+
+    #versus-text {
+        margin: 0;
+    }
+
+    .small-icon.left {
+        margin-left: -80%;
+    
+    }
+    
+    .small-icon.right {
+        margin-right: -70%;
+    }
+
+    body{
+        /* background-image: url(/Assets/background.png) */
+    }
+
+    #heading-main{
+        padding: 2em;
+    }
+    #footer{
+         /* background-color: rgba(256, 256, 256,0.1); */
+    }
+}

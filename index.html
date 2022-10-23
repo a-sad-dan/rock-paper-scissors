@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div id="page-wrapper">
+
+        <div id="header">
+            <h1 id="heading-main">Rock Paper Scissors</h1>
+        </div>
+
+        <div id="main-content">
+            <div id="stats-display">
+                <div id="player-stats">
+                    <div class="container">
+                        <div class="selected-image shadow">
+
+                            <img class="big-icon" src="/Assets/question-mark.png" alt="">
+                            
+
+                        </div>
+                        <!-- small player icon -->
+                        <img src="/Assets/player-icon.png" alt="" class="small-icon left">
+                    </div>
+                    <p class="score" id="player-score">1?</p>
+                </div>
+                <p id="versus-text">VS</p>
+                <div id="computer-stats">
+                    <div class="container">
+                        <div class="selected-image">
+
+                            <img class="big-icon" src="/Assets/question-mark.png" alt="">
+                        </div>
+                            <img src="/Assets/computer-icon.png" alt="" class="small-icon right">
+                            <!-- small computer icon -->
+                    </div>
+                    <p class="score" id="computer-score">0?</p>
+                </div>
+            </div>
+            <div id="choices" >
+                <input type="image" src="/Assets/rock-icon.png" alt="rock">
+                <input type="image" src="/Assets/paper-icon.png" alt="paper">
+                <input type="image" src="/Assets/scissors-icon.png" alt="scissors">
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>Crafted by <a href="https://github.com/a-sad-dan">Dan</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

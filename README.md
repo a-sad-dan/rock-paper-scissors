@@ -1,2 +1,2 @@
 # rock-paper-scissors
-Browser based rock papper scissors game 
+Browser based Rock Paper Scissors game 
