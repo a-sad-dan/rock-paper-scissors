@@ -1,6 +1,6 @@
 // Function to get computer choice
 function getComputerChoice() {
-    const choices = ['Rock', 'Paper', 'Scissors'];
+    const choices = ['rock', 'paper', 'scissors'];
     computerSelection = choices[Math.floor(Math.random() * choices.length)];
     return (computerSelection);
 }
@@ -9,19 +9,16 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     // Tie Case
     if (playerSelection == computerSelection) {
-        return (`It's a tie. Both chose ${computerSelection}`);
+        return 0;
     }
     // Win cases for the player
-    else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
-        return (`You Win! ${playerSelection} defeats ${computerSelection}`);
-    } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-        return (`You Win! ${playerSelection} defeats ${computerSelection}`);
-    } else if(playerSelection==='Scissors' && computerSelection==='Paper'){
-        return(`You Win! ${playerSelection} defeats ${computerSelection}`);
-    }
+    else if (playerSelection === 'rock' && computerSelection === 'scissors') {return 1;}
+     else if (playerSelection === 'paper' && computerSelection === 'rock') {return 1;}
+     else if (playerSelection === 'scissors' && computerSelection === 'paper') {return 1;}
+
     //Lose case for the player
     else {
-        return(`You Lose! ${computerSelection} defeats ${playerSelection}`);
+        return 0;
     }
 }
 
@@ -29,20 +26,28 @@ const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
+const playerFrame = document.querySelector("#playerChoiceImage")
+const computerFrame = document.querySelector("#computerChoiceImage")
+
+
+rock.addEventListener('click', () => {
+    changeImage(playerFrame, 'rock');
+    changeImage(computerFrame,getComputerChoice());
+});
+paper.addEventListener('click', () => {
+    changeImage(playerFrame, 'paper');
+    changeImage(computerFrame,getComputerChoice());
+});
+scissors.addEventListener('click', () => {
+    changeImage(playerFrame, 'scissors');
+    changeImage(computerFrame,getComputerChoice());
+});
 
 
 
-const resultsDiv = document.querySelector('#results');
-const resultStatement = document.createElement('p');
 
+// Function to change the image shown in selected window
 
-rock.addEventListener('click',()=>showTextResult(resultsDiv,resultStatement,playRound('Rock',getComputerChoice())));
-paper.addEventListener('click',()=>showTextResult(resultsDiv,resultStatement,playRound('Paper',getComputerChoice())));
-scissors.addEventListener('click',()=>showTextResult(resultsDiv,resultStatement,playRound('Scissors',getComputerChoice())));
-
-// Function to  change the text of the paragraph
-
-function showTextResult(parentNode,paragraph_Element,Statement){
-    paragraph_Element.textContent = `${Statement}`
-    parentNode.appendChild(paragraph_Element);
+function changeImage(elementName, imageName) {
+    elementName.src = `Assets/${imageName}.png`;
 }

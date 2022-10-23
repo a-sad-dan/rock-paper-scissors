@@ -5,6 +5,7 @@
     font-size: 12px;
 }
 
+
 * {
     box-sizing: border-box;
     /* border: 1px solid gray; */
@@ -19,7 +20,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     /* THIS makes sure that the bg does not move with the page */
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
 
@@ -42,7 +43,7 @@ body {
 }
 
 .score {
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
 
 /* Alignment of objects */
@@ -86,7 +87,9 @@ body {
 .big-icon {
     width: 60%;
     aspect-ratio: 1;
-    opacity: 0.7;
+    /* opacity: 0.7; */
+    object-fit: contain;
+
 }
 
 
@@ -137,12 +140,12 @@ body {
 
 }
 
-#footer  a{
+#footer a {
     color: unset;
     text-decoration: none;
 }
 
-#footer a:hover{
+#footer a:hover {
     text-decoration: underline;
     color: #101b1b;
 }
@@ -187,6 +190,7 @@ body {
 #choices>input:hover {
     transform: scale(1.2);
     transition: all 120ms ease-in-out;
+    outline: none; 
 }
 
 /*                  MEDIA QUERIES                    */
@@ -232,21 +236,14 @@ body {
 
     .small-icon.left {
         margin-left: -80%;
-    
+
     }
-    
+
     .small-icon.right {
         margin-right: -70%;
     }
 
-    body{
-        /* background-image: url(Assets/background.png) */
-    }
-
-    #heading-main{
+    #heading-main {
         padding: 2em;
-    }
-    #footer{
-         /* background-color: rgba(256, 256, 256,0.1); */
     }
 }
