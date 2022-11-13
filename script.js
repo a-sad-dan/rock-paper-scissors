@@ -45,11 +45,11 @@ function playRound(playerSelection, computerSelection) {
             toggleModal()
         }, 600);
         if (computerScore.textContent > playerScore.textContent) {
-            document.querySelector('#result-image').src = '/Assets/cry.png';
+            document.querySelector('#result-image').src = 'Assets/cry.png';
             document.querySelector('#result-statement').textContent = 'You Lose!';
         }
         if (computerScore.textContent < playerScore.textContent) {
-            document.querySelector('#result-image').src = '/Assets/trophy-golden.png';
+            document.querySelector('#result-image').src = 'Assets/trophy-golden.png';
             document.querySelector('#result-statement').textContent = 'You Win!';
         }
     }
