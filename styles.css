@@ -1,5 +1,5 @@
 /* I need to clean this code a lot. LIKE A LOT */
-#page-wrapper{
+#page-wrapper {
     height: 10vh;
 }
 
@@ -26,14 +26,27 @@ body {
     background-size: 100% 100%;
     /* THIS makes sure that the bg does not move with the page */
     background-attachment: fixed;
+
+    /* Removes selection of text of the Page */
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
 
 /* Typography */
 body {
     font-family: 'Press Start 2P', cursive;
-    color: #162424;
+    color: #070c0c;
 }
+
+#result-statement {
+    font-size: 2rem;
+    text-align: center;
+}
+
 
 
 #versus-text {
@@ -65,8 +78,7 @@ body {
     padding-top: 10vh;
     /* border: 2px solid black; */
     /* text-decoration: 2px underline; */
-
-
+    font-size: 2em;
     margin: 0 auto;
 }
 
@@ -152,11 +164,52 @@ body {
 
 #footer a:hover {
     text-decoration: underline;
-    color: #101b1b;
 }
 
 .selected-image>img {
     width: 100%;
+}
+
+/* =======   STYLE FOR MODAL   ======== */
+#modal {
+    width: 30%;
+    min-width: 220px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFEE7;
+    /* -webkit-text-stroke: 2px #101b1b; */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+        gap: 2em;
+}
+
+#result-image{
+    max-width: 120px;
+    width: 40%;
+}
+
+#modal p{
+    margin: 0;
+}
+
+#replay {
+    width: 40%;
+    max-width: 150px;
+}
+
+
+/* Making the hidden class */
+.hidden {
+    display: none !important;
 }
 
 
@@ -184,6 +237,13 @@ body {
     object-fit: contain;
 }
 
+#footer span img{
+    width: 25px;
+    margin-bottom: -0.3em;
+    margin-left: 0.4em;
+}
+
+
 /*              HOVER-ANIMATIONS              */
 
 #choices>input:hover {
@@ -191,10 +251,11 @@ body {
     transition: all 120ms ease-in-out;
 }
 
+
 /*                  MEDIA QUERIES                    */
 @media screen and (max-width:767px) {
 
-    body{
+    body {
         background-image: url(Assets/alt-background-2.png);
     }
 
@@ -247,12 +308,18 @@ body {
 
     #heading-main {
         padding: 1em 2em;
+        font-size: 1.6em;
+        min-width: 300px;
     }
 
     /* Removed annoying blue click border on mobile devices */
 
     input {
         outline: none;
+    }
+
+    #replay {
+        min-width: 120px;
     }
 
 }
