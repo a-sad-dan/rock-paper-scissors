@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
         // document.querySelector('#versus-text').textContent ='Done';
         setTimeout(() => {
             toggleModal()
-        }, 600);
+        }, 100);
         if (computerScore.textContent > playerScore.textContent) {
             document.querySelector('#result-image').src = 'Assets/cry.png';
             document.querySelector('#result-statement').textContent = 'You Lose!';
