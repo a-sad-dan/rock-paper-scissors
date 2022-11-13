@@ -21,32 +21,32 @@
             <h1 id="heading-main">Rock Paper Scissors</h1>
         </div>
 
-        <div id="main-content">
+        <div id="main-content" class="">
             <div id="stats-display">
                 <div id="player-stats">
                     <div class="container">
                         <div class="selected-image shadow">
 
-                            <img id = "playerChoiceImage" class="big-icon" src="Assets/questionmark.png" alt="">
+                            <img id = "playerChoiceImage" class="big-icon" src="Assets/questionmark.png" alt="Player Choice">
                             
 
                         </div>
                         <!-- small player icon -->
                         <img src="Assets/playerIcon.png" alt="" class="small-icon left">
                     </div>
-                    <p class="score" id="player-score">1?</p>
+                    <p class="score" id="player-score">0</p>
                 </div>
                 <p id="versus-text">VS</p>
                 <div id="computer-stats">
                     <div class="container">
                         <div class="selected-image">
 
-                            <img id ="computerChoiceImage" class="big-icon" src="Assets/questionmark.png" alt="">
+                            <img id ="computerChoiceImage" class="big-icon" src="Assets/questionmark.png" alt="Computer Choice">
                         </div>
                             <img src="Assets/computerIcon.png" alt="" class="small-icon right">
                             <!-- small computer icon -->
                     </div>
-                    <p class="score" id="computer-score">0?</p>
+                    <p class="score" id="computer-score">0</p>
                 </div>
             </div>
             <div id="choices" >
@@ -55,11 +55,22 @@
                 <input id = "scissors" type="image" src="Assets/scissors.png" alt="scissors">
             </div>
         </div>
-
-        <div id="footer">
-            <p>Crafted by <a href="https://github.com/a-sad-dan">Dan</a></p>
+        <!-- Modal for the game Over screen -->
+        <div id="modal" class="hidden">
+            <p id="result-statement">You Win</p>
+            <!-- Extra Image?? -->
+            <img src="" alt="" id="result-image">
+            <input id = "replay" type="image" src="Assets/replay.png" alt="replay">
+            
         </div>
+        <div id="footer">
+            <p>Crafted by <a href="https://github.com/a-sad-dan"><span>Dan<img src="/Assets/github.png" alt="github" id="github"></span></a></p>
+        </div>
+
+        <!-- SOUND FX -->
+        <audio src="/Assets/sounds/rock.mp3" id="rock-fx"></audio>
+        <audio src="/Assets/sounds/paper.mp3" id="paper-fx"></audio>
+        <audio src="/Assets/sounds/scissors.mp3" id="scissors-fx"></audio>
     </div>
 </body>
-
 </html>
