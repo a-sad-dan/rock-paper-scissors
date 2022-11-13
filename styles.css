@@ -246,11 +246,14 @@ body {
 
 /*              HOVER-ANIMATIONS              */
 
-#choices>input:hover {
+#choices>input:hover{
     transform: scale(1.2);
     transition: all 120ms ease-in-out;
 }
-
+#replay:hover{
+    transform: scale(1.1);
+    transition: all 100ms ease-in-out;
+}
 
 /*                  MEDIA QUERIES                    */
 @media screen and (max-width:767px) {
