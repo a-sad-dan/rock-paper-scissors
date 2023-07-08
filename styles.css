@@ -189,15 +189,15 @@ body {
         2px -2px 0 #000,
         -2px 2px 0 #000,
         2px 2px 0 #000;
-        gap: 2em;
+    gap: 2em;
 }
 
-#result-image{
+#result-image {
     max-width: 120px;
     width: 40%;
 }
 
-#modal p{
+#modal p {
     margin: 0;
 }
 
@@ -237,22 +237,66 @@ body {
     object-fit: contain;
 }
 
-#footer span img{
+#footer span img {
     width: 25px;
     margin-bottom: -0.3em;
     margin-left: 0.4em;
 }
 
+/* The Full Screen button */
+#fullscreen-btn {
+    font-size: 8px;
+    border: unset;
+    background: rgba(25,25,25,0.2);
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+
+  }
+  
+
 
 /*              HOVER-ANIMATIONS              */
 
-#choices>input:hover{
+#choices>input:hover {
     transform: scale(1.2);
     transition: all 120ms ease-in-out;
 }
-#replay:hover{
+
+#replay:hover {
     transform: scale(1.1);
     transition: all 100ms ease-in-out;
+}
+
+/*                 ANIMATIONS                    */
+.shake {
+    animation: tilt-n-move-shaking 0.3s linear both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(15px, 2px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+
+    75% {
+        transform: translate(-15px, 2px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
 /*                  MEDIA QUERIES                    */
@@ -288,6 +332,11 @@ body {
         font-size: 1.2em;
         /* background-color: rgba(0,0,0,0.2); */
 
+    }
+    #fullscreen-btn {
+        border: unset;
+        background: rgba(255,255,255,0.2);
+        padding: 8px 12px;
     }
 
 

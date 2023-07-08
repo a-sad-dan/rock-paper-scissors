@@ -22,22 +22,29 @@ function playRound(playerSelection, computerSelection) {
     // Tie Case
     if (playerSelection == computerSelection) {
 
+
     }
     // Win cases for the player
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore.textContent = `${parseInt(playerScore.textContent) + 1}`;
+        toggleShake(computerFrame);
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore.textContent = `${parseInt(playerScore.textContent) + 1}`;
+        toggleShake(computerFrame);
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore.textContent = `${parseInt(playerScore.textContent) + 1}`;
+        toggleShake(computerFrame);
     }
 
     //Lose case for the player
     else {
         computerScore.textContent = `${parseInt(computerScore.textContent) + 1}`;
+        toggleShake(playerFrame);
     }
+
+    // Toggling the Modal and showing the result
 
     if (computerScore.textContent >= '5' || playerScore.textContent >= '5') {
         // document.querySelector('#versus-text').textContent ='Done';
@@ -55,6 +62,12 @@ function playRound(playerSelection, computerSelection) {
     }
 
 }
+
+// Function to toggle shake animation
+function toggleShake(frameName) {
+    frameName.classList.toggle('shake');
+}
+
 // Function to toggle Modal
 function toggleModal() {
     document.querySelector('#modal').classList.toggle('hidden');
@@ -85,3 +98,23 @@ rock.addEventListener('click', () => document.querySelector("#rock-fx").play());
 paper.addEventListener('click', () => document.querySelector("#paper-fx").play());
 scissors.addEventListener('click', () => document.querySelector("#scissors-fx").play());
 
+// Making the page-full screen for better UX
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+fullscreenBtn.addEventListener('click', () => {
+  const elem = document.documentElement; // Whole document element
+  
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { // Firefox
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // Edge
+    elem.msRequestFullscreen();
+  }
+});
+
+
+
+// NOTE TO SELF : ADD A TOGGLE FULL SCREEN INSTEAD OF JUST FULL SCREEN
